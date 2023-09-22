@@ -12,7 +12,7 @@ import com.procedure.genericutility.BaseClass;
 import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserChatWindowPage;
-public class CM013_ValidateDraftMessageIsMaintainedAfterReopeningTheChat extends BaseClass {
+public class testCM013_ValidateDraftMessageIsMaintainedAfterReopeningTheChat extends BaseClass {
 	@Test
 	public void testValidateDraftMessageIsMaintainedAfterReopeningTheChat() throws Throwable {
 		//Read Data from files

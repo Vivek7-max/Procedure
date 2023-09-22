@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.procedure.genericutility.BaseClass;
 import com.procedure.objectrepository.HomePage;
 @Listeners(com.procedure.genericutility.ListenerImplementation.class)
-public class CM003_ValidateNotificationBadgeForUnreadMessages extends BaseClass {
+public class testCM003_ValidateNotificationBadgeForUnreadMessages extends BaseClass {
 	@Test(groups = "regressionTest")
 	public void testValidateNotificationBadgeForUnreadMessages() throws Throwable {
 		//Read the data from property file

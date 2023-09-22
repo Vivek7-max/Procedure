@@ -10,7 +10,7 @@ import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserChatWindowPage;
 
 @Listeners(com.procedure.genericutility.ListenerImplementation.class)
-public class CM001_testMessageIsReceivedAsSentForSenderPointOfView extends BaseClass{	
+public class testCM001_testMessageIsReceivedAsSentForSenderPointOfView extends BaseClass{	
 	@Test(groups = "smokeTest")
 	public void testMessageIsReceivedAsSentForSenderPointOfView() throws Throwable {
 		//Read Data from property file

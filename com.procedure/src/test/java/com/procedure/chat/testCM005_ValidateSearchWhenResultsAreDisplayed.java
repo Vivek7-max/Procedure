@@ -17,7 +17,7 @@ import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserChatWindowPage;
 
 @Listeners(com.procedure.genericutility.ListenerImplementation.class)
-public class CM005_ValidateSearchWhenResultsAreDisplayed extends BaseClass {
+public class testCM005_ValidateSearchWhenResultsAreDisplayed extends BaseClass {
 	@Test
 	public void testValidateSearchWhenResultsAreDisplayed() throws Throwable {
 		//Read Data from property file

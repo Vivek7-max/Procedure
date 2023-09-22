@@ -13,7 +13,7 @@ import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserChatWindowPage;
 @Listeners(com.procedure.genericutility.ListenerImplementation.class)
-public class CM002_testMessageIsReceivedAsSenForReceeiverPointOfView extends BaseClass {
+public class testCM002_testMessageIsReceivedAsSenForReceeiverPointOfView extends BaseClass {
 	@Test(groups = "smokeTest")
 	public void testMessageIsReceivedAsSenForReceeiverPointOfView() throws Throwable {
 		//Read the data from property file

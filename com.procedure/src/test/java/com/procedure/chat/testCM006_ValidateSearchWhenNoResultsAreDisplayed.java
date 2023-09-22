@@ -13,7 +13,7 @@ import com.procedure.genericutility.BaseClass;
 import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserChatWindowPage;
-public class CM006_ValidateSearchWhenNoResultsAreDisplayed extends BaseClass {
+public class testCM006_ValidateSearchWhenNoResultsAreDisplayed extends BaseClass {
 	@Test(priority = -1)
 	public void testValidateSearchWhenNoResultsAreDisplayed() throws Throwable {
 		//Read the data from property file

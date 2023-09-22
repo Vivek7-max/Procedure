@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.procedure.genericutility.BaseClass;
 import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
-public class CM009_ValidateClosingTheChatWindowByClickingOnTheCloseButtonOfChatWindow extends BaseClass {
+public class testCM009_ValidateClosingTheChatWindowByClickingOnTheCloseButtonOfChatWindow extends BaseClass {
 	@Test
 	public void testValidateClosingTheChatWindowByClickingOnTheCloseButtonOfChatWindow() {
 		//Page Instances

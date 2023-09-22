@@ -14,7 +14,7 @@ import com.procedure.genericutility.BaseClass;
 import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserChatWindowPage;
-public class CM012_ValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat extends BaseClass{
+public class testCM012_ValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat extends BaseClass{
 	@Test
 	public void testValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat() throws Throwable {
 		//Read Data from files

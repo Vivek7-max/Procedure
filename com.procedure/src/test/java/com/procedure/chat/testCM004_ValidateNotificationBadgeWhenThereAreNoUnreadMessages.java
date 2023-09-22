@@ -11,7 +11,7 @@ import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserChatWindowPage;
 @Listeners(com.procedure.genericutility.ListenerImplementation.class)
-public class CM004_ValidateNotificationBadgeWhenThereAreNoUnreadMessages extends BaseClass {
+public class testCM004_ValidateNotificationBadgeWhenThereAreNoUnreadMessages extends BaseClass {
 	@Test(groups = "regressionTest")
 	public void testValidateNotificationBadgeWhenThereAreNoUnreadMessages() throws Throwable {
 		//Read the data from property file
