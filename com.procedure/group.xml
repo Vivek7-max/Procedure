@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<groups>
+		<run>
+			<include name="smokeTest"></include>
+		</run>
+	</groups>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.procedure.chat.CM010_ValidateClosingTheChatWindowByClickingOnTheEscapeButtonFromKeyboard"/>
+      <class name="com.procedure.chat.CM008_ValidateClosingTheChatWindowByClickingAnywhereElseOnTheScreen"/>
+      <class name="com.procedure.chat.CM013_ValidateDraftMessageIsMaintainedAfterReopeningTheChat"/>
+      <class name="com.procedure.chat.CM007_ValidateDisabledUsersAreNotDisaplyedInSearchList"/>
+      <class name="com.procedure.chat.CM014_ValidateTheLatestMessageOfEachChatShouldBeDisplayedInChatHistoryListForThatChat"/>
+      <class name="com.procedure.chat.CM004_ValidateNotificationBadgeWhenThereAreNoUnreadMessages"/>
+      <class name="com.procedure.chat.CM006_ValidateSearchWhenNoResultsAreDisplayed"/>
+      <class name="com.procedure.chat.CM009_ValidateClosingTheChatWindowByClickingOnTheCloseButtonOfChatWindow"/>
+      <class name="com.procedure.chat.CM003_ValidateNotificationBadgeForUnreadMessages"/>
+      <class name="com.procedure.chat.CM011_ValidateStateIsMaintainedForSearchAfterReopeningTheChat"/>
+      <class name="com.procedure.chat.CM012_ValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat"/>
+      <class name="com.procedure.chat.CM001_testMessageIsReceivedAsSentForSenderPointOfView"/>
+      <class name="com.procedure.chat.CM015_ValidateDateAndTimeOnChatHistoryListIsDisplayedAsExpected"/>
+      <class name="com.procedure.chat.CM005_ValidateSearchWhenResultsAreDisplayed"/>
+      <class name="com.procedure.chat.CM002_testMessageIsReceivedAsSenForReceeiverPointOfView"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
