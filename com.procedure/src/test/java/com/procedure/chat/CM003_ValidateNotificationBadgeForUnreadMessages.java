@@ -4,11 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.procedure.genericutility.BaseClass;
 import com.procedure.objectrepository.HomePage;
-
+@Listeners(com.procedure.genericutility.ListenerImplementation.class)
 public class CM003_ValidateNotificationBadgeForUnreadMessages extends BaseClass {
 	@Test(groups = "regressionTest")
 	public void testValidateNotificationBadgeForUnreadMessages() throws Throwable {

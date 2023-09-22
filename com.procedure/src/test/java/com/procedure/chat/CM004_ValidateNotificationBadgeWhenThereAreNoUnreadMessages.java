@@ -2,6 +2,7 @@ package com.procedure.chat;
 
 import org.junit.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -9,7 +10,7 @@ import com.procedure.genericutility.BaseClass;
 import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserChatWindowPage;
-
+@Listeners(com.procedure.genericutility.ListenerImplementation.class)
 public class CM004_ValidateNotificationBadgeWhenThereAreNoUnreadMessages extends BaseClass {
 	@Test(groups = "regressionTest")
 	public void testValidateNotificationBadgeWhenThereAreNoUnreadMessages() throws Throwable {

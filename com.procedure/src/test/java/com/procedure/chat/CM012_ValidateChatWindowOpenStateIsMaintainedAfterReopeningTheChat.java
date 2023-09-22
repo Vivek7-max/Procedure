@@ -6,6 +6,7 @@ import java.awt.event.KeyEvent;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -13,7 +14,6 @@ import com.procedure.genericutility.BaseClass;
 import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserChatWindowPage;
-
 public class CM012_ValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat extends BaseClass{
 	@Test
 	public void testValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat() throws Throwable {

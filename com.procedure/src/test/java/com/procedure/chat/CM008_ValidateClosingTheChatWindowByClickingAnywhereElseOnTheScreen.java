@@ -2,12 +2,12 @@ package com.procedure.chat;
 
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.procedure.genericutility.BaseClass;
 import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
-
 public class CM008_ValidateClosingTheChatWindowByClickingAnywhereElseOnTheScreen extends BaseClass {
 	@Test
 	public void testValidateClosingTheChatWindowByClickingAnywhereElseOnTheScreen() {

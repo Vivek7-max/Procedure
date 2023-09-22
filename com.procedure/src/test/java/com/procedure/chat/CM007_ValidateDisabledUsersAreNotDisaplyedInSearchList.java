@@ -2,6 +2,7 @@ package com.procedure.chat;
 
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.procedure.genericutility.BaseClass;
@@ -9,7 +10,6 @@ import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserDetailsPage;
 import com.procedure.objectrepository.UserPage;
-
 public class CM007_ValidateDisabledUsersAreNotDisaplyedInSearchList extends BaseClass {
 	@Test
 	public void testValidateDisabledUsersAreNotDisaplyedInSearchList() throws InterruptedException {

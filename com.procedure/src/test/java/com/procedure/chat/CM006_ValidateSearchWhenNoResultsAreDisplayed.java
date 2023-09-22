@@ -5,6 +5,7 @@ import java.util.Random;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -12,7 +13,6 @@ import com.procedure.genericutility.BaseClass;
 import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserChatWindowPage;
-
 public class CM006_ValidateSearchWhenNoResultsAreDisplayed extends BaseClass {
 	@Test(priority = -1)
 	public void testValidateSearchWhenNoResultsAreDisplayed() throws Throwable {

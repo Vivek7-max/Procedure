@@ -21,17 +21,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	public WebDriver driver;
-
+	public static WebDriver sDriver;
 	public WebActionUtility wLib = new WebActionUtility();
 	public FileUtility fLib = new FileUtility();
 	public JavaUtility jLib = new JavaUtility();
 	public ExcelUtility eLib = new ExcelUtility();
 	public String url;
+	
 
 	@BeforeClass(groups = "smokeTest")
 	public void openBrowser() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
+		sDriver = driver;
 		driver.manage().window().maximize();
 		System.out.println("Browser Launched..!");
 
@@ -103,7 +105,6 @@ public class BaseClass {
 		//Step 2: click on chat icon and verify chat window is displayed
 		wLib.waitForVisibilityOfEle(driver, hp.getChatIcon());
 		hp.getChatIcon().click();
-		SoftAssert sa = new SoftAssert();
 		wLib.waitForVisibilityOfEle(driver, cwp.getChatText());
 		Assert.assertTrue(cwp.getChatText().isDisplayed());
 		Reporter.log("Chat window is displayed.",true);
@@ -117,6 +118,7 @@ public class BaseClass {
 
 		//Step 4: Click on user and verify user chat window is displayed
 		wLib.waitForVisibilityOfEle(driver, cwp.getFirstChatSuggetion());
+		Thread.sleep(3000);
 		cwp.getFirstChatSuggetion().click();
 		wLib.waitForVisibilityOfEle(driver, ucwp.getUserChatIcon(driver, user));
 		Assert.assertTrue(ucwp.getUserChatIcon(driver, user).isDisplayed());

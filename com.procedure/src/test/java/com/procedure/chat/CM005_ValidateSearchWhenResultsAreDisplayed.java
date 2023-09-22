@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.procedure.genericutility.BaseClass;
 import com.procedure.genericutility.FileUtility;
@@ -15,6 +16,7 @@ import com.procedure.objectrepository.ChatWindowPage;
 import com.procedure.objectrepository.HomePage;
 import com.procedure.objectrepository.UserChatWindowPage;
 
+@Listeners(com.procedure.genericutility.ListenerImplementation.class)
 public class CM005_ValidateSearchWhenResultsAreDisplayed extends BaseClass {
 	@Test
 	public void testValidateSearchWhenResultsAreDisplayed() throws Throwable {

@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.procedure.chat.CM012_ValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat">
+      <class name="com.procedure.chat.CM003_ValidateNotificationBadgeForUnreadMessages">
         <methods>
           <include name="logout"/>
           <include name="openBrowser"/>
-          <include name="testValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat"/>
           <include name="closeBrowser"/>
           <include name="login"/>
+          <include name="testValidateNotificationBadgeForUnreadMessages"/>
         </methods>
-      </class> <!-- com.procedure.chat.CM012_ValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat -->
+      </class> <!-- com.procedure.chat.CM003_ValidateNotificationBadgeForUnreadMessages -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
