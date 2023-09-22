@@ -17,7 +17,9 @@ import com.procedure.objectrepository.UserChatWindowPage;
 public class CM012_ValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat extends BaseClass{
 	@Test
 	public void testValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat() throws Throwable {
-		//Read Data from property file
+		//Read Data from files
+		String date = eLib.readDataFromExcel("./testdata/testCaseData.xlsx", "Chat", "TC_CM012", "Date");
+		String message = eLib.readDataFromExcel("./testdata/testCaseData.xlsx", "Chat", "TC_CM012", "Message");
 		String user = fLib.readDataFromPropertyFile("./config/commondata.properties", "user");
 		wLib.waitForElementEmplicitly(driver);
 
@@ -40,8 +42,10 @@ public class CM012_ValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat 
 		Assert.assertTrue(ucwp.getUserChatIcon(driver, user).isDisplayed());
 		Reporter.log("User chat window is displayed.",true);
 		wLib.waitForInvisibilityOfEle(driver, cwp.getLoader());
-		wLib.randomClick(driver, 1335, 467);	
-		WebElement oldMsg = ucwp.getOldMessage(driver, "09/13/2023", "All is well!");
+		wLib.randomClick(driver, 1335, 467);
+		System.out.println("Message Date : "+date);
+		System.out.println("Message : "+message);
+		WebElement oldMsg = ucwp.getOldMessage(driver, date, message);
 		wLib.scrollTillElementIsVisible(driver, oldMsg);
 		Assert.assertTrue(oldMsg.isDisplayed());
 		Reporter.log("Old message is displayed", true);
@@ -54,6 +58,7 @@ public class CM012_ValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat 
 		Reporter.log("Patient Master Text is dispalyed after pressing Escape button", true);
 		
 		//Step 5: Click on chat icon
+		wLib.waitForVisibilityOfEle(driver, hp.getChatIcon());
 		hp.getChatIcon().click();
 		Assert.assertTrue(cwp.getChatText().isDisplayed());
 		Reporter.log("Chat window is displayed after reopening",true);

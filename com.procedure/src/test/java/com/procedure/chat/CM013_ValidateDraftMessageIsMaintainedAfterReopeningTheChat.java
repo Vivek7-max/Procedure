@@ -15,9 +15,12 @@ import com.procedure.objectrepository.UserChatWindowPage;
 public class CM013_ValidateDraftMessageIsMaintainedAfterReopeningTheChat extends BaseClass {
 	@Test
 	public void testValidateDraftMessageIsMaintainedAfterReopeningTheChat() throws Throwable {
-		//Read Data from property file
+		//Read Data from files
 		String user = fLib.readDataFromPropertyFile("./config/commondata.properties", "user");
 		String message = fLib.readDataFromPropertyFile("./config/commondata.properties", "message");
+		String date = eLib.readDataFromExcel("./testdata/testCaseData.xlsx", "Chat", "TC_CM012", "Date");
+		String testMessage = eLib.readDataFromExcel("./testdata/testCaseData.xlsx", "Chat", "TC_CM012", "Message");
+		
 		wLib.waitForElementEmplicitly(driver);
 
 		//Page Instances
@@ -40,7 +43,9 @@ public class CM013_ValidateDraftMessageIsMaintainedAfterReopeningTheChat extends
 		Reporter.log("User chat window is displayed.",true);
 		wLib.waitForInvisibilityOfEle(driver, cwp.getLoader());
 		wLib.randomClick(driver, 1335, 467);	
-		WebElement oldMsg = ucwp.getOldMessage(driver, "09/13/2023", "All is well!");
+		System.out.println("Date: "+date);
+		System.out.println("testMessage : "+testMessage);
+		WebElement oldMsg = ucwp.getOldMessage(driver, date, testMessage);
 		wLib.scrollTillElementIsVisible(driver, oldMsg);
 		Assert.assertTrue(oldMsg.isDisplayed());
 		Reporter.log("Old message is displayed", true);

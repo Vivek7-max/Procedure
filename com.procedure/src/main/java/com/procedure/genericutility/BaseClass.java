@@ -25,6 +25,7 @@ public class BaseClass {
 	public WebActionUtility wLib = new WebActionUtility();
 	public FileUtility fLib = new FileUtility();
 	public JavaUtility jLib = new JavaUtility();
+	public ExcelUtility eLib = new ExcelUtility();
 	public String url;
 
 	@BeforeClass(groups = "smokeTest")

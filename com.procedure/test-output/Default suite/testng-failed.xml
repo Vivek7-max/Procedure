@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.procedure.chat.CM006_ValidateSearchWhenNoResultsAreDisplayed">
+      <class name="com.procedure.chat.CM012_ValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat">
         <methods>
-          <include name="test"/>
           <include name="logout"/>
           <include name="openBrowser"/>
+          <include name="testValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat"/>
           <include name="closeBrowser"/>
           <include name="login"/>
         </methods>
-      </class> <!-- com.procedure.chat.CM006_ValidateSearchWhenNoResultsAreDisplayed -->
+      </class> <!-- com.procedure.chat.CM012_ValidateChatWindowOpenStateIsMaintainedAfterReopeningTheChat -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
